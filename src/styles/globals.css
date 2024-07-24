@@ -172,6 +172,13 @@
   margin-left: 5px;
 }
 
+.hr {
+
+  border: 1px solid #e0ff84;
+
+
+}
+
 .product-caption {
   display: block;
   padding: 3px 0;

@@ -64,7 +64,7 @@ const IndexPage = ({ product }) => {
       
       
     </div>
-    <hr />
+    <hr className="hr"/>
     
     <div className="row">
 
