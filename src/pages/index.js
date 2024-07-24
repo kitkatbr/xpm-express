@@ -33,7 +33,7 @@ const IndexPage = ({ product }) => {
                 borderBottom: "1px solid #E5E7EB",
               }}
             >
-              <Image src={"/logo.svg"} width={"200px"} height={"42px"} />
+              <Image src={"/logo.svg"} width={"42px"} height={"42px"} />
             </Text>
             <Text variant="heading3" sx={{ mb: "16px" }}>
               Welcome!

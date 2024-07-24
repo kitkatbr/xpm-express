@@ -13,7 +13,7 @@ const ProductDisplay = ({ region, product }) => {
     
         <Image
           sx={{
-            width: "30%",
+            width: "50%",
             borderRadius: "4px",
             objectFit: "contain",
             objectPosition: "center center",
