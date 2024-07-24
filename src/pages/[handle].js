@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Steps from "../components/steps"
 import { client } from "../utils/client"
 
+
 const ProductPage = ({ product, regions }) => {
   const [region, setRegion] = useState(regions?.[0] || null)
   const [country, setCountry] = useState(region?.countries?.[0].iso_2 || "")
@@ -22,7 +23,7 @@ const ProductPage = ({ product, regions }) => {
         handleRegionChange={handleRegionChange}
       >
         <Head>
-          <title>Medusa Express - {product.title}</title>
+          <title>xpmais.com - {product.title}</title>
           <meta name="description" content={product?.description || ""} />
         </Head>
         <Steps

@@ -7,17 +7,22 @@ const ProductDisplay = ({ region, product }) => {
   return product ? (
     <Flex sx={{ flexDirection: "column" }}>
       <Flex sx={{ flexDirection: "row", width: "100%", height: "100%" }}>
+
+              
+
+    
         <Image
           sx={{
-            width: "50%",
+            width: "30%",
             borderRadius: "4px",
             objectFit: "contain",
             objectPosition: "center center",
           }}
-          src={product.thumbnail}
+          src={"/elden-ring.webp"}
           alt={product.title}
         />
-        <Info product={product} region={region} />
+
+
       </Flex>
       <Text
         sx={{
@@ -29,8 +34,20 @@ const ProductDisplay = ({ region, product }) => {
         }}
         variant="fz_s"
       >
-        {product.description}
-      </Text>
+    <div className="product-desc">
+      <span className="product-title">
+      Elden Ring <b>Runes</b>
+
+              <span className="badge">
+                New
+              </span>
+      </span>
+      <span className="product-caption">
+      {product.description}
+            </span>
+   
+      
+    </div>      </Text>
       <OptionSelector product={product} />
     </Flex>
   ) : null

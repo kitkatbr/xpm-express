@@ -13,7 +13,7 @@ const IndexPage = ({ product }) => {
   return (
     <main>
       <Head>
-        <title>Medusa Express</title>
+        <title>xpmais.com</title>
         <meta name="description" content="One-page checkout" />
       </Head>
       <Layout>
