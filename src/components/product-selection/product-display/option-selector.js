@@ -1,4 +1,4 @@
-import { Box, Flex, Select, Text } from "@theme-ui/components"
+import { Box, Flex, Select, Text, Slider,Input } from "@theme-ui/components"
 import React, { useContext, useEffect, useMemo, useState } from "react"
 import ProductContext from "../../../context/product-context"
 
@@ -145,44 +145,47 @@ const OptionSelector = ({ product }) => {
         }}
       >
         <Text sx={{ mb: "12px", fontWeight: "bold" }}>Quantity</Text>
-        <Select
-          defaultValue={quantity || 1}
-          sx={{
-            minWidth: "170px",
-            height: "40px",
-            border: "1px solid #E5E7EB",
-            borderRadius: "4px",
-            backgroundColor: "inherit",
-            color: "#6B7280",
-            outline: "none",
-          }}
-          arrow={
-            <Box
-              as="svg"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="#6B7280"
-              sx={{
-                ml: -28,
-                alignSelf: "center",
-                pointerEvents: "none",
-              }}
-            >
-              <path d="M7.41 7.84l4.59 4.58 4.59-4.58 1.41 1.41-6 6-6-6z" />
-            </Box>
-          }
-          onChange={handleQuantity}
-        >
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((v, i) => {
-            return (
-              <option key={i} value={`${v}`}>
-                {v}
-              </option>
-            )
-          })}
-        </Select>
+
+
+        
+        <Flex
+      sx={{
+        flexDirection: "column",
+        mb: ".75em",
+        width: "100%",
+      }}
+    >
+<Input autoComplete="given-name" autofillBackgroundColor="highlight" 
+
+defaultValue={quantity || 1}
+
+sx={{
+  minWidth: "170px",
+  height: "40px",
+  border: "1px solid #E5E7EB",
+  borderRadius: "4px",
+  backgroundColor: "inherit",
+  color: "#6B7280",
+  outline: "none",
+}}
+
+/>
+<Slider 
+        defaultValue={quantity || 1}
+        onChange={handleQuantity}
+
+        sx={{
+    
+   
+          backgroundColor: "#6d13eb",
+          color: "#6d13eb",
+     
+        }}
+        />
+
+    </Flex>
+
+        
       </Flex>
     </Flex>
   )
