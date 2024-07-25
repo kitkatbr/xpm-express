@@ -1,12 +1,38 @@
 import { Box, Flex, Select, Text, Slider,Input } from "@theme-ui/components"
 import React, { useContext, useEffect, useMemo, useState } from "react"
 import ProductContext from "../../../context/product-context"
+import { formatVariantPrice } from "medusa-react"
+import { useCart } from "medusa-react"
 
-const OptionSelector = ({ product }) => {
+const OptionSelector = ({ region, product  }) => {
   const { quantity, updateQuantity, selectVariant } = useContext(ProductContext)
   const [options, setOptions] = useState([])
   const [selection, setSelection] = useState(JSON.stringify({}))
 
+  let x = formatVariantPrice({
+    variant: product.variants[0] ,
+    region,
+  })
+
+
+  let price = formatVariantPrice({
+    variant: product.variants[0] ,
+    region,
+  })
+
+  let cifra = "#"
+
+  if (price?.includes("$")) { price = price.replace("$","").replace(",",""), cifra="$"}
+  if (price?.includes("R$")) { price = price.replace("R$","").replace(",",""), cifra="R$"}
+  if (price?.includes("€")) { price = price.replace("€","").replace(",",""), cifra="€"}
+
+
+
+
+
+
+// 7
+  
   useEffect(() => {
     const opts = []
     for (const option of product.options) {
@@ -16,6 +42,8 @@ const OptionSelector = ({ product }) => {
         values: [...new Set(option.values.map(v => v.value))],
       }
       opts.push(opt)
+
+   
     }
     setOptions(opts)
 
@@ -155,10 +183,10 @@ const OptionSelector = ({ product }) => {
         width: "100%",
       }}
     >
-<Input autoComplete="given-name" autofillBackgroundColor="highlight" 
+<Input
 
 defaultValue={quantity || 1}
-
+value={quantity || 1}
 sx={{
   minWidth: "170px",
   height: "40px",
@@ -177,15 +205,42 @@ sx={{
         sx={{
     
    
-          backgroundColor: "#e6fa2e",
+          backgroundColor: "#f3f4f6",
           color: "#6d13eb",
-          marginTop: "20px"
+          marginTop: "20px",
+          marginBottom: "20px",
+          height: "2px",
 
      
         }}
         />
 
     </Flex>
+
+    <Text
+        sx={{
+          mt: "16px",
+          lineHeight: "24px",
+          fontSize: "14px",
+          fontWeight: 300,
+          color: "#6B7280",
+        }}
+        variant="fz_s"
+      >
+
+<div className="btn-group">
+
+
+<span className="product-price">
+<div className="price-card price-card-new"><span>{cifra}</span>{ price * quantity}<span>.00</span></div>
+
+
+  </span>
+
+
+</div>
+
+         </Text>
 
         
       </Flex>

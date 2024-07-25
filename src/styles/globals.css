@@ -114,6 +114,7 @@
 }
 
 .price-card-new {
+  color: #6d13eb;
   font-size: 3rem;
   span {
     &:first-child {
