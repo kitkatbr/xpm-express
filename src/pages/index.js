@@ -7,8 +7,22 @@ import CodeSnippet from "../components/code-snippet"
 import Layout from "../components/layout/layout"
 import { client } from "../utils/client"
 
+const { loadIntercom, initIntercomWindow } = require("next-intercom");
+
 const IndexPage = ({ product }) => {
   const router = useRouter()
+
+  const intercomID = 'zq6qqsdr'
+          loadIntercom({
+        
+        
+            appId: intercomID, // default : ''
+            email: "", //default: ''
+            name: "", //default: RandomName
+            ssr: false, // default: false
+            initWindow: true, // default: true
+            delay: 0, // default: 0  - usefull for mobile devices to prevent blocking the main thread
+          });
 
   return (
     <main>
@@ -33,7 +47,7 @@ const IndexPage = ({ product }) => {
                 borderBottom: "1px solid #E5E7EB",
               }}
             >
-              <Image src={"/logo.svg"} width={"42px"} height={"42px"} />
+              <Image src={"/logo.svg"} width={42} height={42} />
             </Text>
             <Text variant="heading3" sx={{ mb: "16px" }}>
               Welcome!

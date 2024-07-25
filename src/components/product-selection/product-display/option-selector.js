@@ -204,15 +204,14 @@ sx={{
         min={Number(product.metadata.min)}
         sx={{
     
-   
           backgroundColor: "#f3f4f6",
           color: "#6d13eb",
           marginTop: "20px",
           marginBottom: "20px",
-          height: "2px",
 
      
         }}
+        
         />
 
     </Flex>

@@ -69,7 +69,7 @@ const Layout = ({ children, country, regions, handleRegionChange }) => {
               href="https://xpmais.com/"
             >
               <Flex sx={{ paddingTop: "10px", alignItems: "center" }}>
-                <Image src="/logo.svg" height={"20px"} width={"20px"} />
+                <Image src="/logo.svg" height={20} width={20} />
                 <Text
                   sx={{
                     ml: "5px",
