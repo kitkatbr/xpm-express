@@ -11,13 +11,18 @@ const ProductDisplay = ({ region, product, cart }) => {
 
               
 
+
     
         <Image
           sx={{
-            width: "50%",
-            borderRadius: "4px",
+            width: "100%",
+            borderStartEndRadius: "10px",
+            borderStartStartRadius: "10px",
             objectFit: "contain",
             objectPosition: "center center",
+            clipPath: "polygon(0 0, 0 100%, 100% 75%, 100% 0%)",
+            boxShadow: "0px 0px 5px 2px rgba(0, 0, 0, 0.1)",
+
           }}
           src={"/elden-ring.webp"}
           alt={product.title}

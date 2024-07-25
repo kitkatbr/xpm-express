@@ -21,9 +21,8 @@ const OptionSelector = ({ region, product  }) => {
   })
 
   let cifra = "#"
-
-  if (price?.includes("$")) { price = price.replace("$","").replace(",",""), cifra="$"}
   if (price?.includes("R$")) { price = price.replace("R$","").replace(",",""), cifra="R$"}
+  if (price?.includes("$")) { price = price.replace("$","").replace(",",""), cifra="$"}
   if (price?.includes("€")) { price = price.replace("€","").replace(",",""), cifra="€"}
 
 
@@ -185,8 +184,7 @@ const OptionSelector = ({ region, product  }) => {
     >
 <Input
 
-defaultValue={quantity || 1}
-value={quantity || 1}
+value={quantity * product.metadata.plus}
 sx={{
   minWidth: "170px",
   height: "40px",
@@ -201,7 +199,8 @@ sx={{
 <Slider 
         defaultValue={quantity || 1}
         onChange={handleQuantity}
-
+        max={product.metadata.max}
+        min={product.metadata.min}
         sx={{
     
    
