@@ -32,8 +32,9 @@
     "react-query": "^3.34.7",
     "sharp": "^0.29.3",
     "theme-ui": "^0.16.2",
-    "@theme-ui/mdx": "^0.16.2",
-    "yup": "^0.32.11"
+    "@mdx-js/react": "3.0.1",
+    
+    "yup": "1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
