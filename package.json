@@ -31,16 +31,16 @@
     "next-i18n-router": "^5.5.1",
     "next-i18next": "15.3.0",
     "next-intercom": "^0.1.4",
+    "next-intl": "^3.8.0",
     "prettier": "3.3.3",
+    "react": "^18",
+    "react-dom": "^18",
     "react-helmet": "^6.1.0",
     "react-i18next": "^15.0.0",
     "react-query": "^3.34.7",
     "sharp": "^0.29.3",
     "theme-ui": "^0.16.2",
-    "yup": "1.4.0",
-    "next-intl": "^3.8.0",
-    "react": "^18",
-    "react-dom": "^18"
+    "yup": "1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -49,6 +49,7 @@
     "@storybook/addon-links": "^6.3.12",
     "@storybook/react": "^6.3.12",
     "@zeit/next-css": "^1.0.1",
-    "babel-loader": "^8.2.2"
+    "babel-loader": "^8.2.2",
+    "typescript": "^5.5.4"
   }
 }
