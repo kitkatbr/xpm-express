@@ -200,8 +200,8 @@ sx={{
 <Slider 
         defaultValue={quantity || 1}
         onChange={handleQuantity}
-        max={product.metadata.max}
-        min={product.metadata.min}
+        max={Number(product.metadata.max)}
+        min={Number(product.metadata.min)}
         sx={{
     
    
