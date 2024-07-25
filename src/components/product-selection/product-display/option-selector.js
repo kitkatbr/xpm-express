@@ -197,6 +197,7 @@ sx={{
 }}
 
 />
+
 <Slider 
         defaultValue={quantity || 1}
         onChange={handleQuantity}
@@ -207,12 +208,21 @@ sx={{
           backgroundColor: "#f3f4f6",
           color: "#6d13eb",
           marginTop: "20px",
-          marginBottom: "20px",
 
      
         }}
         
         />
+<Flex sx={{ alignItems: "center", margin: "" }}>
+              <Text sx={{ fontWeight: "light", color: "#9ba2ad" }}>1000K</Text>
+
+              <Text sx={{ width: "90%", fontWeight: "light", color: "#9ba2ad" }}></Text>
+
+              
+
+              <Text sx={{ mr: "6px", fontWeight: "light", color: "#9ba2ad"}}>10000K</Text>
+
+              </Flex>
 
     </Flex>
 
