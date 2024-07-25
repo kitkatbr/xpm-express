@@ -184,7 +184,7 @@ const OptionSelector = ({ region, product  }) => {
     >
 <Input
 
-value={quantity}
+value={quantity * Number(product.metadata.plus)}
 readOnly
 sx={{
   minWidth: "170px",
