@@ -206,7 +206,7 @@ sx={{
         sx={{
     
           backgroundColor: "#f3f4f6",
-          color: "#6d13eb",
+          color: "#58cdd1",
           marginTop: "20px",
 
      

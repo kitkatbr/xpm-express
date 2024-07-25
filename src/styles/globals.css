@@ -84,7 +84,7 @@
 .price {
   align-items: center;
 	position: relative;
-	background: #6d13eb;
+	background: #58cdd1;
 	text-align: center;
 	display: flex;
 	font-size: 18px;
@@ -114,7 +114,7 @@
 }
 
 .price-card-new {
-  color: #6d13eb;
+  color: #58cdd1;
   font-size: 3rem;
   span {
     &:first-child {
@@ -169,7 +169,7 @@
   font-size: 10px;
   font-weight: 300;
   color: #fff;
-  background: #6d13eb;
+  background: #58cdd1;
   padding: 2px 5px;
   border-radius: 4px;
   top: -2px;
