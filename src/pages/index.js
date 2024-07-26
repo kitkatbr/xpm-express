@@ -6,25 +6,13 @@ import { Button, Card, Flex, Text } from "theme-ui"
 import CodeSnippet from "../components/code-snippet"
 import Layout from "../components/layout/layout"
 import { client } from "../utils/client"
-import { formatVariantPrice } from "medusa-react"
-
 
 const { loadIntercom, initIntercomWindow } = require("next-intercom");
 
 const IndexPage = ({ product }) => {
   const router = useRouter()
 
-  let price = formatVariantPrice({
-    variant: product.variants[0] ,
-    region,
-  })
-
-  let cifra = "#"
-  if (price?.includes("R$")) { price = price.replace("R$","").replace(",",""), cifra="R$"}
-  if (price?.includes("$")) { price = price.replace("$","").replace(",",""), cifra="$"}
-  if (price?.includes("€")) { price = price.replace("€","").replace(",",""), cifra="€"}
-
-
+  
 
   const intercomID = 'zq6qqsdr'
           loadIntercom({
@@ -104,10 +92,10 @@ const IndexPage = ({ product }) => {
 
 
       <span className="product-price">
-<div className="price-card price-card-new"><span>{cifra}</span>{ price * quantity}<span>.00</span></div>
+      <div className="price-card price-card-new"><span>$</span> 1<span>.00</span></div>
 
 
-  </span>
+        </span>
 
 
     </div>
