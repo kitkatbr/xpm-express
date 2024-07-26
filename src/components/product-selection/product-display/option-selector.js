@@ -9,10 +9,7 @@ const OptionSelector = ({ region, product  }) => {
   const [options, setOptions] = useState([])
   const [selection, setSelection] = useState(JSON.stringify({}))
 
-  let x = formatVariantPrice({
-    variant: product.variants[0] ,
-    region,
-  })
+
 
 
   let price = formatVariantPrice({
