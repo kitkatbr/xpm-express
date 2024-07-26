@@ -52,7 +52,7 @@ const IndexPage = ({ product }) => {
               <Image src={"/logo.svg"} width={42} height={42} />
             </Text>
             <Text variant="heading3" sx={{ mb: "16px" }}>
-              Welcome!
+              Welcome!2s   sss
             </Text>
             
             <div className="card" onClick={() => router.push(`/${product.handle}`)}>
