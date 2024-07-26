@@ -10,7 +10,7 @@ const theme = {
   },
   breakpoints: ["720px"],
   colors: {
-    primary: "#6e46eb",
+    primary: "#111827",
     medusaGreen: "#56FBB1",
     medusa100: "#454B54",
     deepBlue: "#0A3149",

@@ -5,13 +5,9 @@ import React, { useState } from "react"
 import * as Yup from "yup"
 import Contact from "./contact"
 import Delivery from "./delivery"
-import { useTranslation } from 'next-i18next'
-
 
 const Forms = ({ country, region, nextStep, setLoading }) => {
   const { updateCart, addShippingMethod, cart } = useCart()
-
-  const { t } = useTranslation('common')
 
   const [isValid, setIsValid] = useState({
     contact: false,

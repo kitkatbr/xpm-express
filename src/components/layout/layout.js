@@ -66,10 +66,10 @@ const Layout = ({ children, country, regions, handleRegionChange }) => {
                   opacity: 0.5,
                 },
               }}
-              href="https://xpmais.com/"
+              href="https://www.medusajs.com/"
             >
               <Flex sx={{ paddingTop: "10px", alignItems: "center" }}>
-                <Image src="/logo.svg" height={20} width={20} />
+                <Image src="/mark-grey.png" height={"15px"} width={"15px"} />
                 <Text
                   sx={{
                     ml: "5px",
@@ -79,7 +79,7 @@ const Layout = ({ children, country, regions, handleRegionChange }) => {
                     lineHeight: "1",
                   }}
                 >
-                  xpmais.com{" "}
+                  medusa{" "}
                 </Text>
               </Flex>
             </Link>
